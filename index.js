@@ -88,17 +88,7 @@ async function crashAndLogError(err) {
 (async () => {
   try {
     browser = await startBrowser();
-    results = await startAuditOnPage();
-    // const ClickLogout = await page.$(
-    //   "body > div.wrapper > div.main-header > nav > div > ul > li > ul > div > div.dropdown-user-scroll.scrollbar-outer.scroll-content > li:nth-child(2) > button"
-    // );
-    // const navigationPromise = page.waitForNavigation({
-    //   waitUntil: "networkidle0",
-    //   timeout: 50000,
-    // });
-    // await ClickLogout.click();
-    // await navigationPromise;
-    
+    results = await startAuditOnPage();    
     await browser.close();
     console.log("Done");
   } catch (err) {
