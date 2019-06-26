@@ -7,7 +7,7 @@ Lightomate is an automation tool to audit your internal ( protected ) and extern
 1. Clone the repo.
 2. cd to cloned repo. Example : "cd lightomate"
 3. Run "npm install" to install dependencies.
-4. Configure code. [ There are comments which will help configure the code.]
+4. Configure code. [ There are comments which will help you configure the code.]
 5. Run "npm start"
 6. Once audit is complete. You can find the page report json in your target report directory.
 
@@ -27,7 +27,7 @@ Lightomate is an automation tool to audit your internal ( protected ) and extern
   *  sudo yum update nss -y
 3. cd to cloned repo.
 4. Run "npm install" to install dependencies.
-5. Configure code. [ There are comments which will help configure the code.] 
+5. Configure code. [ There are comments which will help you configure the code.] 
 6. Run "npm start"
 7. Once audit is complete. You can find the page report json in your target report directory. 
 
