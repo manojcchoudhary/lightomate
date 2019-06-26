@@ -9,14 +9,13 @@ const lightHouseConfig = {
     emulatedFormFactor: "desktop",
   },
   disableStorageReset: true,
-};
+}; //configure lightHouseConfig according to your needs 
 const puppeteerPortConfig = "9222";
 const username = "replace_me";  //Replace replace_me with username  
 const password = "replace_me";  //Replace replace_me with password
 const URLS = ["replace_me","replace_me"]; //Replace replace_me with routes
 const Domain = "replace_me"; //Replace replace_me with domain. Example : "http://example.com/"
 const reportPath = "replace_me"; //Replace replace_me with path to save reports. Example : "/" 
-let results;
 
 async function startBrowser() {
   return puppeteer.launch({
@@ -54,8 +53,7 @@ async function startAuditOnPage() {
     // console.log("DATA" + (await lighthouse(Domain + URLS[0], lightHouseConfig)));
     let json = [];
     for (let i = 0; i < URLS.length; i++) {
-      try {
-        // json.push(await lighthouse(Domain + URLS[i], lightHouseConfig));    
+      try { 
         let resultForUrl = await lighthouse(Domain + URLS[i], lightHouseConfig);
         fs.writeFile(
           `${reportPath + (URLS[i] == "" ? `index${[i]}` : URLS[i].replace(/\`|\~|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\+|\=|\[|\{|\]|\}|\||\\|\'|\<|\,|\.|\>|\?|\/|\""|\;|\:|\s/g,"-")) }.json`,
